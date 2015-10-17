@@ -64,3 +64,59 @@ curso_list = [
 curso_list.each do |curso|
 	Curso.create(nome: curso[0], grau:curso[1])
 end
+
+disciplina_list = [
+	["Matemática Discreta (Cc)",60],
+	["Cálculo A",60],
+	["Geometria Analitica",30],
+	["Algoritmos e Programacao I",90],
+	["Introducao A Ciencia da Computacao",60],
+	["Cálculo B",60],
+	["Algebra Matricial",30],
+	["Algoritmos e Programacao II",90],
+	["Logica para Computacao",60],
+	["Linguagens Formais",60],
+	["Organizacao e Arquit. de Computadores I",60],
+	["Modelagem de Software",60],
+	["Laboratorio de Banco de Dados I",30],
+	["Algoritmos e Programacao III",90],
+	["Paradigmas de Linguagens de Programacao",60],
+	["Teoria da Computacao",60],
+	["Organizacao e Arquit. de Computadores II",60],
+	["Programacao para Software Basico",60],
+	["Modelagem Conceit. e Proj. de Banco Dados",60],
+	["Complexidade e Otimizacao",60],
+	["Técnicas de Programação",60],
+	["Computacao Grafica I",60],
+	["Organizacao e Arquit. de Computadores III",60],
+	["Compiladores",60],
+	["Métodos Estatísticos",60],
+	["Gerencia de Projetos de Software",60],
+	["Projeto de Interfaces",30],
+	["Metodos Formais para Computacao",60],
+	["Computacao Grafica II",30],
+	["Sistemas Operacionais (Cc)",60],
+	["Redes de Computadores I",60],
+	["Desenvolvimento de Sistemas",60],
+	["Implementacao de Banco de Dados",60],
+	["Entretenimento Digital",30],
+	["Inteligencia Artificial",60],
+	["Metodos Computacionais (Cc)",60],
+	["Programacao de Perifericos (Cc)",30],
+	["Redes de Computadores II",60],
+	["Laboratorio de Redes de Computadores",30],
+	["Humanismo e Cultura Religiosa",60],
+	["Trabalho de Conclusao I",60],
+	["Avaliacao de Desempenho de Sistemas",60],
+	["Redes de Computadores III",60],
+	["Programacao Paralela",30],
+	["Ética e Filosofia da Ciência",60],
+	["Empreendimentos Empresariais",60],
+	["Trabalho de Conclusao II",60],
+	["Sistemas Embarcados",60],
+	["Programacao Distribuida",60]
+]
+
+disciplina_list.each do |disciplina|
+	Disciplina.create(nome: disciplina[0], creditos:disciplina[1])
+end

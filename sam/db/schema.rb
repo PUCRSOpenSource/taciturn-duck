@@ -11,12 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151017034028) do
+ActiveRecord::Schema.define(version: 20151017040453) do
+
+  create_table "curriculos", force: :cascade do |t|
+    t.integer  "curso_id"
+    t.integer  "codigo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "curriculos", ["curso_id"], name: "index_curriculos_on_curso_id"
 
   create_table "cursos", force: :cascade do |t|
     t.string   "nome"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "grau"
   end
 
   create_table "disciplinas", force: :cascade do |t|

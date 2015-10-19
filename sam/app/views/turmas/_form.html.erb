@@ -1,29 +1,29 @@
-<%= form_for(@turma) do |f| %>
-  <% if @turma.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@turma.errors.count, "error") %> prohibited this turma from being saved:</h2>
-
-      <ul>
-      <% @turma.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :horario %><br>
-    <%= f.text_field :horario %>
-  </div>
-  <div class="field">
-    <%= f.label :numero %><br>
-    <%= f.number_field :numero %>
-  </div>
-  <div class="field">
-    <%= f.label :disciplina_id %><br>
-    <%= f.text_field :disciplina_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= form_for @turma , html: {class: "pure-form pure-form-aligned"} do |f| %>
+	<% if @turma.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@turma.errors.count, "error") %> prohibited this turma from being saved:</h2>
+			<ul>
+				<% @turma.errors.full_messages.each do |message| %>
+					<li><%= message %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<fieldset id="" class="">
+		<div class="pure-control-group">
+			<%= f.label :horario %>
+			<%= f.text_field :horario %>
+		</div>
+		<div class="pure-control-group">
+			<%= f.label :numero %>
+			<%= f.number_field :numero %>
+		</div>
+		<div class="pure-control-group">
+			<%= f.label :disciplina_id %>
+			<%= f.text_field :disciplina_id %>
+		</div>
+		<div class="pure-control-group">
+			<%= f.submit %>
+		</div>
+	</fieldset>
 <% end %>

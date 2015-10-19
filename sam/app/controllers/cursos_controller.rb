@@ -28,7 +28,7 @@ class CursosController < ApplicationController
 
     respond_to do |format|
       if @curso.save
-        format.html { redirect_to @curso, notice: 'Curso criado com sucesso.' }
+        format.html { redirect_to @curso, notice: 'Curso was successfully created.' }
         format.json { render :show, status: :created, location: @curso }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class CursosController < ApplicationController
   def update
     respond_to do |format|
       if @curso.update(curso_params)
-        format.html { redirect_to @curso, notice: 'Curso atualizado com sucesso.' }
+        format.html { redirect_to @curso, notice: 'Curso was successfully updated.' }
         format.json { render :show, status: :ok, location: @curso }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class CursosController < ApplicationController
   def destroy
     @curso.destroy
     respond_to do |format|
-      format.html { redirect_to cursos_url, notice: 'Curso removido com sucesso.' }
+      format.html { redirect_to cursos_url, notice: 'Curso was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class CursosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def curso_params
-      params.require(:curso).permit(:nome)
+      params.require(:curso).permit(:nome, :grau)
     end
 end

@@ -1,4 +1,4 @@
-<%= form_for(@curriculo) do |f| %>
+<%= form_for @curriculo, html: {class: "pure-form pure-form-stacked"} do |f| %>
 	<% if @curriculo.errors.any? %>
 		<div id="error_explanation">
 			<h2><%= pluralize(@curriculo.errors.count, "error") %> prohibited this curriculo from being saved:</h2>

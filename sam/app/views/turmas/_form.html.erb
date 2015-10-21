@@ -1,4 +1,4 @@
-<%= form_for @turma , html: {class: "pure-form pure-form-stacked"} do |f| %>
+<%= form_for @turma, html: {class: "pure-form pure-form-stacked"} do |f| %>
 	<% if @turma.errors.any? %>
 		<div id="error_explanation">
 			<h2><%= pluralize(@turma.errors.count, "error") %> prohibited this turma from being saved:</h2>

@@ -1,21 +1,21 @@
 <%= form_for(@curriculo) do |f| %>
-  <% if @curriculo.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@curriculo.errors.count, "error") %> prohibited this curriculo from being saved:</h2>
+	<% if @curriculo.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@curriculo.errors.count, "error") %> prohibited this curriculo from being saved:</h2>
 
-      <ul>
-      <% @curriculo.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+			<ul>
+				<% @curriculo.errors.full_messages.each do |message| %>
+					<li><%= message %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
 
-  <div class="field">
-    <%= f.label :curso_id %><br>
-    <%= f.text_field :curso_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+	<div class="pure-control-group">
+		<%= f.label :curso_id %>
+		<%= f.text_field :curso_id %>
+	</div>
+	<div class="pure-control-group">
+		<%= f.submit %>
+	</div>
 <% end %>

@@ -2,6 +2,6 @@ language: ruby
 env:
     - DB=sqlite
 rvm:
-        - 2.2.3p173
+        - 2.2.3
 script:
     - RAILS_ENV=test bundle exec rake --trace db:migrate test

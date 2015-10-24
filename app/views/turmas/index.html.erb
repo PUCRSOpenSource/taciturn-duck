@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Turmas</h1>
+<h1>Listing Turmas</h1>
 
-<table class='pure-table'>
+<table>
   <thead>
     <tr>
       <th>Horario</th>
@@ -13,14 +13,14 @@
   </thead>
 
   <tbody>
-    <% @turmas.each do |turma, index| %>
-		<tr class="<%= 'pure-table-odd' if turma.id.even? %>">
+    <% @turmas.each do |turma| %>
+      <tr>
         <td><%= turma.horario %></td>
         <td><%= turma.numero %></td>
-        <td><%= turma.disciplina.nome %></td>
-        <td><%= link_to 'Ver', turma %></td>
-        <td><%= link_to 'Editar', edit_turma_path(turma) %></td>
-        <td><%= link_to 'Apagar', turma, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= turma.disciplina %></td>
+        <td><%= link_to 'Show', turma %></td>
+        <td><%= link_to 'Edit', edit_turma_path(turma) %></td>
+        <td><%= link_to 'Destroy', turma, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'Cadastrar Turma', new_turma_path, class:"pure-button"%>
+<%= link_to 'New Turma', new_turma_path %>

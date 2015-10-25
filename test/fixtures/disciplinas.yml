@@ -2,8 +2,8 @@
 
 one:
   nome: MyString
-  creditos: 1
+  semestre: 1
 
 two:
   nome: MyString
-  creditos: 1
+  semestre: 1

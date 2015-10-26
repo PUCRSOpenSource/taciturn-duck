@@ -15,7 +15,7 @@
 		nenhum
 	<% else %>
 		<% @pre_requisitos.each do |p| %>
-			<%= p %><br>
+			<%= p[:nome] %><br>
 		<% end %>
 	<% end %>
 </p>

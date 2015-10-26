@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151025224933) do
+ActiveRecord::Schema.define(version: 20151026201028) do
+
+  create_table "curriculos", force: :cascade do |t|
+    t.string   "codigo"
+    t.integer  "curso_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "curriculos", ["curso_id"], name: "index_curriculos_on_curso_id"
 
   create_table "cursos", force: :cascade do |t|
     t.string   "nome"

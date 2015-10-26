@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :curriculos
   resources :turmas
   resources :pre_requisitos
   resources :disciplinas

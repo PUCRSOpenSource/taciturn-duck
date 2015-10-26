@@ -71,4 +71,8 @@ class DisciplinasController < ApplicationController
     def disciplina_params
       params.require(:disciplina).permit(:nome, :semestre)
     end
+
+		def get_pre_requisitos disciplina_id
+			Disciplina.find_by_sql("select disciplinas.nome, disciplinas.id from disciplinas inner join pre_requisitos on disciplinas.id == pre_requisitos.pre_requisito_id where pre_requisitos.disciplina_id == #{disciplina_id}")
+		end
 end

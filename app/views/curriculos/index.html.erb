@@ -15,7 +15,7 @@
     <% @curriculos.each do |curriculo| %>
       <tr>
         <td><%= curriculo.codigo %></td>
-        <td><%= curriculo.curso %></td>
+        <td><%= curriculo.curso.nome %></td>
         <td><%= link_to 'Show', curriculo %></td>
         <td><%= link_to 'Edit', edit_curriculo_path(curriculo) %></td>
         <td><%= link_to 'Destroy', curriculo, method: :delete, data: { confirm: 'Are you sure?' } %></td>

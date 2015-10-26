@@ -10,6 +10,12 @@ class DisciplinasController < ApplicationController
   # GET /disciplinas/1
   # GET /disciplinas/1.json
   def show
+		pre_requisitos = PreRequisito.where(disciplina_id: params[:id])
+		@pre_requisitos = []
+		pre_requisitos.each do |p|
+			disc = Disciplina.find p[:pre_requisito_id]
+			@pre_requisitos << disc[:nome]
+		end
   end
 
   # GET /disciplinas/new

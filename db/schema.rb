@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151026202520) do
+ActiveRecord::Schema.define(version: 20151026205948) do
 
   create_table "curriculos", force: :cascade do |t|
     t.string   "codigo"
@@ -33,9 +33,10 @@ ActiveRecord::Schema.define(version: 20151026202520) do
   create_table "disciplinas", force: :cascade do |t|
     t.string   "nome"
     t.integer  "semestre"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.integer  "creditos"
+    t.integer  "curriculo_id"
   end
 
   create_table "pre_requisitos", force: :cascade do |t|

@@ -15,6 +15,7 @@ class CurriculosController < ApplicationController
   # GET /curriculos/new
   def new
     @curriculo = Curriculo.new
+	2.times {@curriculo.disciplinas.build}
   end
 
   # GET /curriculos/1/edit
@@ -69,6 +70,6 @@ class CurriculosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def curriculo_params
-      params.require(:curriculo).permit(:codigo, :curso_id)
+      params.require(:curriculo).permit(:codigo, :curso_id, disciplinas_attributes:[:id])
     end
 end

@@ -12,17 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :codigo %><br>
-    <%= f.text_field :codigo %>
+    <%= f.label :identificador %><br>
+    <%= f.text_field :identificador %>
   </div>
   <div class="field">
     <%= f.label :curso_id %><br>
     <%= f.text_field :curso_id %>
   </div>
-  <%= f.fields_for :disciplinas do |disciplina_form| %>
+  <div class="field">
     <%= f.label :disciplina_id %><br>
     <%= f.text_field :disciplina_id %>
-  <% end %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -1,13 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Codigo:</strong>
-  <%= @curriculo.codigo %>
+  <strong>Identificador:</strong>
+  <%= @curriculo.identificador %>
 </p>
 
 <p>
   <strong>Curso:</strong>
-  <%= @curriculo.curso.nome %>
+  <%= @curriculo.curso %>
+</p>
+
+<p>
+  <strong>Disciplina:</strong>
+  <%= @curriculo.disciplina %>
 </p>
 
 <%= link_to 'Edit', edit_curriculo_path(@curriculo) %> |

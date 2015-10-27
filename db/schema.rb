@@ -11,17 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151026205948) do
+ActiveRecord::Schema.define(version: 20151027004740) do
 
   create_table "curriculos", force: :cascade do |t|
-    t.string   "codigo"
+    t.string   "identificador"
     t.integer  "curso_id"
+    t.integer  "disciplina_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.integer  "disciplina_id"
   end
 
   add_index "curriculos", ["curso_id"], name: "index_curriculos_on_curso_id"
+  add_index "curriculos", ["disciplina_id"], name: "index_curriculos_on_disciplina_id"
 
   create_table "cursos", force: :cascade do |t|
     t.string   "nome"
@@ -33,10 +34,9 @@ ActiveRecord::Schema.define(version: 20151026205948) do
   create_table "disciplinas", force: :cascade do |t|
     t.string   "nome"
     t.integer  "semestre"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer  "creditos"
-    t.integer  "curriculo_id"
   end
 
   create_table "pre_requisitos", force: :cascade do |t|

@@ -1,4 +1,5 @@
 class Curriculo < ActiveRecord::Base
   belongs_to :curso
-  belongs_to :disciplina
+  has_many :disciplinas
+  accepts_nested_attributes_for :disciplinas, :reject_if => :all_blank
 end

@@ -1,29 +1,30 @@
-<%= form_for(@curriculo) do |f| %>
-  <% if @curriculo.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@curriculo.errors.count, "error") %> prohibited this curriculo from being saved:</h2>
+<%= form_for @curriculo, html:{class: 'form-horizontal col-md-8'} do |f| %>
+	<% if @curriculo.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@curriculo.errors.count, 'error') %> prohibited this curriculo from being saved:</h2>
 
-      <ul>
-      <% @curriculo.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+			<ul>
+				<% @curriculo.errors.full_messages.each do |message| %>
+					<li><%= message %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
 
-  <div class="field">
-    <%= f.label :identificador %><br>
-    <%= f.text_field :identificador %>
-  </div>
-  <div class="field">
-    <%= f.label :curso_id %><br>
-    <%= f.text_field :curso_id %>
-  </div>
-  <div class="field">
-    <%= f.label :disciplina_id %><br>
-    <%= f.text_field :disciplina_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+	<div class='form-group'>
+		<%= f.label :identificador, :class=> 'control-label' %>
+		<%= f.text_field :identificador, :class => 'form-control'%>
+	</div>
+	<div class='form-group'>
+		<%= f.label :curso_id, :class=> 'control-label' %>
+		<%= f.text_field :curso_id, :class => 'form-control' %>
+	</div>
+	<div class='form-group'>
+		<%= f.fields_for :disciplinas do |item| %>
+			<%= render "disciplina_fields", :f => item %>
+		<% end %>
+	<div class="actions">
+		<%= link_to_add_association 'Adicionar Disciplina ', f, :disciplinas, :class => 'btn btn-default' %>
+		<%= f.submit :class => "btn btn-default" %>
+	</div>
 <% end %>

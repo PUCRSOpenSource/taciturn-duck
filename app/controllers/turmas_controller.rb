@@ -69,6 +69,6 @@ class TurmasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def turma_params
-      params.require(:turma).permit(:horario, :disciplina_id)
+      params.require(:turma).permit(:horario, :numero, :disciplina_id)
     end
 end

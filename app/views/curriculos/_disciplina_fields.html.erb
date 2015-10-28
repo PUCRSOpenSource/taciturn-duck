@@ -1,6 +1,0 @@
-<div >
-    <%= f.label :nome, :class=> 'control-label col-sm-2'%>
-	<%= f.collection_select :id, @disc, :id, :nome, {prompt: "Selecione uma Disciplina"}, {'data-live-search': "true"}%>
-	<%= link_to_remove_association "remove item", f, :class => 'btn btn-danger' %>
-
-</div>

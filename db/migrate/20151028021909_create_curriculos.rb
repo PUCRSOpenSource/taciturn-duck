@@ -1,7 +1,7 @@
 class CreateCurriculos < ActiveRecord::Migration
   def change
     create_table :curriculos do |t|
-      t.string :identificador
+      t.string :codigo
       t.references :curso, index: true, foreign_key: true
       t.references :disciplina, index: true, foreign_key: true
 

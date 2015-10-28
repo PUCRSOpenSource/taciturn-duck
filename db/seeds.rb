@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
 curso_list = [
 	[ "Administração: Administração de Empresas","Bacharelado"],
 	[ "Administração: Comércio Internacional","Bacharelado"],
@@ -69,21 +62,21 @@ disciplina_list = [
 	["Matemática Discreta (Cc)",4,1],
 	["Cálculo A",4,1],
 	["Geometria Analitica",2,1],
-	["Algoritmos e Programacao I",6,1],
+	["Algoritmos e Programação I",6,1],
 	["Introducao A Ciencia da Computacao",4,1],
 	["Cálculo B",4,1],
 	["Algebra Matricial",2,2],
-	["Algoritmos e Programacao II",6,2],
+	["Algoritmos e Programação II",6,2],
 	["Logica para Computacao",4,2],
 	["Linguagens Formais",4,2],
 	["Organizacao e Arquit. de Computadores I",4,2],
 	["Modelagem de Software",4,3],
 	["Laboratorio de Banco de Dados I",2,3],
-	["Algoritmos e Programacao III",6,3],
-	["Paradigmas de Linguagens de Programacao",4,3],
+	["Algoritmos e Programação III",6,3],
+	["Paradigmas de Linguagens de Programação",4,3],
 	["Teoria da Computacao",4,3],
 	["Organizacao e Arquit. de Computadores II",4,3],
-	["Programacao para Software Basico",4,3],
+	["Programação para Software Basico",4,3],
 	["Modelagem Conceit. e Proj. de Banco Dados",4,4],
 	["Complexidade e Otimizacao",4,4],
 	["Técnicas de Programação",4,4],
@@ -102,19 +95,19 @@ disciplina_list = [
 	["Entretenimento Digital",2,6],
 	["Inteligencia Artificial",4,6],
 	["Metodos Computacionais (Cc)",4,6],
-	["Programacao de Perifericos (Cc)",2,6],
+	["Programação de Perifericos (Cc)",2,6],
 	["Redes de Computadores II",4,6],
 	["Laboratorio de Redes de Computadores",2,6],
 	["Humanismo e Cultura Religiosa",4,7],
 	["Trabalho de Conclusao I",4,7],
 	["Avaliacao de Desempenho de Sistemas",4,7],
 	["Redes de Computadores III",4,7],
-	["Programacao Paralela",2,7],
+	["Programação Paralela",2,7],
 	["Ética e Filosofia da Ciência",4,8],
 	["Empreendimentos Empresariais",4,8],
 	["Trabalho de Conclusao II",4,8],
 	["Sistemas Embarcados",4,8],
-	["Programacao Distribuida",4,8]
+	["Programação Distribuida",4,8]
 ]
 
 disciplina_list.each do |disciplina|

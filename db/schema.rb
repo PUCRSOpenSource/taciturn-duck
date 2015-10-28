@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151027202325) do
+ActiveRecord::Schema.define(version: 20151028021909) do
 
   create_table "curriculos", force: :cascade do |t|
-    t.string   "identificador"
+    t.string   "codigo"
     t.integer  "curso_id"
     t.integer  "disciplina_id"
     t.datetime "created_at",    null: false
@@ -33,29 +33,22 @@ ActiveRecord::Schema.define(version: 20151027202325) do
 
   create_table "disciplinas", force: :cascade do |t|
     t.string   "nome"
-    t.integer  "semestre"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
     t.integer  "creditos"
-    t.integer  "curriculo_id"
-  end
-
-  add_index "disciplinas", ["curriculo_id"], name: "index_disciplinas_on_curriculo_id"
-
-  create_table "pre_requisitos", force: :cascade do |t|
-    t.integer  "disciplina_id"
-    t.integer  "pre_requisito_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.integer  "semestre"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "turmas", force: :cascade do |t|
     t.string   "horario"
+    t.integer  "numero"
     t.integer  "disciplina_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
 
   add_index "turmas", ["disciplina_id"], name: "index_turmas_on_disciplina_id"
+  add_index "turmas", ["horario"], name: "index_turmas_on_horario"
+  add_index "turmas", ["numero"], name: "index_turmas_on_numero"
 
 end

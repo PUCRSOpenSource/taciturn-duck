@@ -1,29 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Turmas</h1>
+<div class="container">
+	<div class="page-header">
+		<h1>Listing Turmas</h1>
+	</div>
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Horario</th>
+				<th>Numero</th>
+				<th>Disciplina</th>
+				<th colspan="3"></th>
+			</tr>
+		</thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Horario</th>
-      <th>Disciplina</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @turmas.each do |turma| %>
-      <tr>
-        <td><%= turma.horario %></td>
-        <td><%= turma.disciplina.nome %></td>
-        <td><%= link_to 'Show', turma %></td>
-        <td><%= link_to 'Edit', edit_turma_path(turma) %></td>
-        <td><%= link_to 'Destroy', turma, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Turma', new_turma_path %>
+		<tbody>
+			<% @turmas.each do |turma| %>
+				<tr>
+					<td><%= turma.horario %></td>
+					<td><%= turma.numero %></td>
+					<td><%= turma.disciplina.nome %></td>
+					<td><%= link_to 'Show', turma %></td>
+					<td><%= link_to 'Edit', edit_turma_path(turma) %></td>
+					<td><%= link_to 'Destroy', turma, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+	<br>
+	<%= link_to 'New Turma', new_turma_path %>
+</div>

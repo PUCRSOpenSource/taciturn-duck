@@ -2,8 +2,10 @@
 
 one:
   horario: MyString
+  numero: 1
   disciplina_id: 
 
 two:
   horario: MyString
+  numero: 1
   disciplina_id: 

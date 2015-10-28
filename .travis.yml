@@ -4,6 +4,6 @@ env:
 rvm:
         - 2.2.3
 script:
-    - RAILS_ENV=test bundle exec rake
+    - RAILS_ENV=test bundle exec rake db:migrate
 notifications:
   slack: taciturnduck:GUlaBVuRHOf03Wy28LlJScKJ

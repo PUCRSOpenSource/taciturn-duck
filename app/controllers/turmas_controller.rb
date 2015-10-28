@@ -15,6 +15,7 @@ class TurmasController < ApplicationController
   # GET /turmas/new
   def new
     @turma = Turma.new
+	@disc = Disciplina.all
   end
 
   # GET /turmas/1/edit

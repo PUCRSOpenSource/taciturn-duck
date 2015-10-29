@@ -20,7 +20,7 @@
 	<div class="form-group">
 		<%= f.label :curso_id, :class => 'control-label col-sm-2' %>
 		<div class="col-sm-6">
-			<%= f.collection_select :curso_id, Curso.all.order('nome ASC'), :id, :nome, {prompt: 'Selecione um Curso'}, {class: 'form-control selectpicker', 'data-live-search': 'true'}%>
+			<%= f.collection_select :curso_id, Curso.all.order('nome ASC'), :id, :nome, {prompt: 'Selecione um Curso'}, {class: 'form-control selectpicker'}%>
 		</div>
 	</div>
 	<%= render 'disciplina_field' , f: f%>

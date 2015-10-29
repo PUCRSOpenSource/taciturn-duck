@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 	root 'pages#home'
 
-	#get 'pages/about'
+	get 'pages/about'
 	resources :curriculos
 	resources :turmas
 	# The priority is based upon order of creation: first created -> highest priority.

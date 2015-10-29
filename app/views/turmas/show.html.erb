@@ -12,7 +12,7 @@
 
 <p>
   <strong>Disciplina:</strong>
-  <%= @turma.disciplina.nome %>
+  <%= @turma.disciplina.try(:nome) %>
 </p>
 
 <%= link_to 'Edit', edit_turma_path(@turma) %> |

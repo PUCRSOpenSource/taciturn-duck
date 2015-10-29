@@ -3,14 +3,7 @@ env:
     - DB=sqlite
 rvm:
     - 2.2.3
-before_install:
-    - gem install bundler bundle_cache
-before_script:
-    - cp config/database.travis.yml config/database.yml
-    - bundle exec rake db:create db:migrate db:schema:load
 script:
     - RAILS_ENV=test bundle exec rake --trace db:migrate test
-after_script:
-    - bundle_cache
 notifications:
     slack: taciturnduck:GUlaBVuRHOf03Wy28LlJScKJ

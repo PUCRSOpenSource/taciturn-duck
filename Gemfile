@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 
 gem 'rails'
 gem 'bootstrap-sass'
-gem 'bootstrap-select-rails'
 gem 'autoprefixer-rails'
 gem 'cocoon'
 gem 'uglifier'

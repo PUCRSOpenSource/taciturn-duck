@@ -19,6 +19,7 @@ class CurriculosController < ApplicationController
 
   # GET /curriculos/1/edit
   def edit
+	  @curriculo
   end
 
   # POST /curriculos

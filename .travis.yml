@@ -4,7 +4,6 @@ env:
 rvm:
     - 2.2.3
 before_install:
-    - 'echo 'gem: --no-ri --no-rdoc'' > ~/.gemrc'
     - gem install bundler bundle_cache
     - bundle_cache_install
 before_script:

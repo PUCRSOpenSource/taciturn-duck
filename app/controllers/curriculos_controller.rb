@@ -70,6 +70,6 @@ class CurriculosController < ApplicationController
 
 	# Never trust parameters from the scary internet, only allow the white list through.
 	def curriculo_params
-		params.require(:curriculo).permit(:codigo, :curso_id, :disciplina_id)
+		params.require(:curriculo).permit(:codigo, :curso_id, disciplinas_attributes: [:id, :_destroy])
 	end
 end

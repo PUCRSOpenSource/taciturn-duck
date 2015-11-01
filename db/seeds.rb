@@ -111,5 +111,6 @@ disciplina_list = [
 ]
 
 disciplina_list.each do |disciplina|
-	Disciplina.create(nome: disciplina[0], creditos:disciplina[1], semestre: disciplina[2])
+	disc = Disciplina.create(nome: disciplina[0], creditos:disciplina[1], semestre: disciplina[2])
+	Curriculo.create(codigo: '4406', curso_id: 7, disciplina_id: disc.id)
 end

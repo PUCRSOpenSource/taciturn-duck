@@ -23,10 +23,12 @@
 			<%= f.collection_select :curso_id, Curso.all.order('nome ASC'), :id, :nome, {prompt: 'Selecione um Curso'}, {class: 'form-control selectpicker'}%>
 		</div>
 	</div>
-	<%= f.fields_for :disciplinas_attributes do |disc| %>
-		<%= render 'disciplina_fields' , f: disc%>
-	<% end %>
-	<%= link_to_add_association 'add task', f, :disciplinas, force_non_association_create: true %>
+	<div>
+		<%= f.fields_for :disciplinas_attributes do |disc| %>
+			<%= render 'disciplina_fields' , f: disc%>
+		<% end %>
+		<%= link_to_add_association 'add task', f, :disciplinas, force_non_association_create: true %>
+	</div>
 	<div class="form-group">
 		<div class="col-sm-offset-2 col-sm-10">
 			<%= f.submit :class =>'btn btn-primary' %>

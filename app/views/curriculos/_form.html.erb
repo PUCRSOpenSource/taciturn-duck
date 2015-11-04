@@ -24,7 +24,7 @@
 		</div>
 	</div>
 	<div>
-		<%= f.fields_for :disciplinas_attributes do |disc| %>
+		<%= f.fields_for :disciplinas do |disc| %>
 			<%= render 'disciplina_fields' , f: disc%>
 		<% end %>
 		<%= link_to_add_association 'add task', f, :disciplinas, force_non_association_create: true %>

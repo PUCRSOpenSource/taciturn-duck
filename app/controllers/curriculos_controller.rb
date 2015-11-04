@@ -25,7 +25,22 @@ class CurriculosController < ApplicationController
 	# POST /curriculos
 	# POST /curriculos.json
 	def create
-		@curriculo = Curriculo.new(curriculo_params)
+		#@curriculo = Curriculo.new(curriculo_params)
+		puts "AHHHHHHHHHHHHHH"
+		hash = Hash.new
+		array = Array.new
+		curriculo_params[:disciplinas_attributes].each do |k,v|
+			curr = Curriculo.new
+			curr[:codigo] = curriculo_params[:codigo]
+			curr[:curso_id] = curriculo_params[:curso_id]
+			curr[:disciplina_id] = v[:id]
+			array << curr
+		end
+		saved = true
+		array.each { |x| puts "#{x[:codigo]} - #{x[:curso_id]} - #{x[:disciplina_id]}" }
+		array.each { |x| saved &= x.save }
+		puts saved
+		puts "OHHHHHHHHHHHHHH"
 
 		respond_to do |format|
 			if @curriculo.save
@@ -70,6 +85,6 @@ class CurriculosController < ApplicationController
 
 	# Never trust parameters from the scary internet, only allow the white list through.
 	def curriculo_params
-		params.require(:curriculo).permit(:codigo, :curso_id, disciplinas_attributes: [:id, :_destroy])
+		params.require(:curriculo).permit(:codigo, :curso_id, disciplinas_attributes: [:id])
 	end
 end

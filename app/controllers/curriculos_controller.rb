@@ -4,12 +4,14 @@ class CurriculosController < ApplicationController
 	# GET /curriculos
 	# GET /curriculos.json
 	def index
-		@curriculos = Curriculo.all
+		@curriculos = Curriculo.all.group(:curso_id)
+		#@curriculos = Curriculo.all
 	end
 
 	# GET /curriculos/1
 	# GET /curriculos/1.json
 	def show
+		@disciplinas = Disciplina.joins(:curriculos).where(curriculos: {codigo: @curriculo.codigo})
 	end
 
 	# GET /curriculos/new
@@ -20,6 +22,7 @@ class CurriculosController < ApplicationController
 	# GET /curriculos/1/edit
 	def edit
 		@curriculo
+		@disciplinas = Disciplina.joins(:curriculos).where(curriculos: {codigo: @curriculo.codigo})
 	end
 
 	# POST /curriculos

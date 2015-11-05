@@ -7,12 +7,14 @@
 
 <p>
   <strong>Curso:</strong>
-  <%= @curriculo.curso %>
+  <%= @curriculo.curso.nome %>
 </p>
 
 <p>
   <strong>Disciplina:</strong>
-  <%= @curriculo.disciplina %>
+  <% @disciplinas.each do |d| %>
+	  <p><%= d.nome %></p>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_curriculo_path(@curriculo) %> |

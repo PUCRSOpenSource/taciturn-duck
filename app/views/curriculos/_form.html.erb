@@ -11,27 +11,27 @@
 		</div>
 	<% end %>
 
-	<div class="form-group">
-		<%= f.label :codigo, :class => 'control-label col-sm-2' %>
-		<div class="col-sm-6">
+	<div class='form-group'>
+		<%= f.label 'Código', :class => 'control-label col-sm-2' %>
+		<div class='col-sm-6'>
 			<%= f.text_field :codigo, :class => 'form-control' %>
 		</div>
 	</div>
-	<div class="form-group">
+	<div class='form-group'>
 		<%= f.label :curso_id, :class => 'control-label col-sm-2' %>
-		<div class="col-sm-6">
+		<div class='col-sm-6'>
 			<%= f.collection_select :curso_id, Curso.all.order('nome ASC'), :id, :nome, {prompt: 'Selecione um Curso'}, {class: 'form-control selectpicker'}%>
 		</div>
 	</div>
-	<div>
+	<div class='nested-fields'>
 		<%= f.fields_for :disciplinas do |disc| %>
 			<%= render 'disciplina_fields' , f: disc%>
 		<% end %>
-		<%= link_to_add_association 'add task', f, :disciplinas, force_non_association_create: true %>
 	</div>
-	<div class="form-group">
-		<div class="col-sm-offset-2 col-sm-10">
-			<%= f.submit :class =>'btn btn-primary' %>
+	<div class='form-group'>
+		<div class='col-sm-offset-2 col-sm-10'>
+			<%= link_to_add_association 'Adiciona Disciplina', f, :disciplinas, force_non_association_create: true, class: 'btn btn-default', 'data-association-insertion-node': '.nested-fields' %>
+			<%= f.submit 'Cadastrar Currículo', :class =>'btn btn-primary' %>
 		</div>
 	</div>
 <% end %>

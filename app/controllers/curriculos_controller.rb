@@ -28,8 +28,6 @@ class CurriculosController < ApplicationController
 	# POST /curriculos
 	# POST /curriculos.json
 	def create
-		#@curriculo = Curriculo.new(curriculo_params)
-		puts "AHHHHHHHHHHHHHH"
 		hash = Hash.new
 		array = Array.new
 		curriculo_params[:disciplinas_attributes].each do |k,v|
@@ -42,16 +40,11 @@ class CurriculosController < ApplicationController
 		saved = true
 		array.each { |x| puts "#{x[:codigo]} - #{x[:curso_id]} - #{x[:disciplina_id]}" }
 		array.each { |x| saved &= x.save }
-		puts saved
-		puts "OHHHHHHHHHHHHHH"
 
 		respond_to do |format|
-			if @curriculo.save
-				format.html { redirect_to @curriculo, notice: 'Curriculo was successfully created.' }
+			if saved
+				format.html { redirect_to curriculos_path, notice: 'Curriculo was successfully created.' }
 				format.json { render :show, status: :created, location: @curriculo }
-			else
-				format.html { render :new }
-				format.json { render json: @curriculo.errors, status: :unprocessable_entity }
 			end
 		end
 	end

@@ -13,6 +13,7 @@ gem 'pg'
 gem 'select2-rails'
 gem 'turbolinks'
 gem 'uglifier'
+gem 'rails-backup-migrate'
 
 gem 'sdoc', group: :doc
 

@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 	root 'pages#home'
 
 	get 'pages/about'
+	get 'pages/backup_restore'
+	get 'restore', to: 'pages#restore'
+	get 'backup', to: 'pages#backup'
 	resources :curriculos
 	resources :turmas
 	# The priority is based upon order of creation: first created -> highest priority.

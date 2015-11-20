@@ -4,4 +4,18 @@ class PagesController < ApplicationController
 
   def about
   end
+
+	def backup_restore
+	end
+
+	def restore
+		system "rake site:restore"
+		render 'backup_restore'
+	end
+
+	def backup
+		system "rake site:backup"
+		render 'backup_restore'
+	end
+
 end

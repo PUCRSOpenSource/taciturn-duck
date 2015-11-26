@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20151028021909) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "curriculos", force: :cascade do |t|
     t.string   "codigo"
     t.integer  "curso_id"
@@ -24,8 +21,8 @@ ActiveRecord::Schema.define(version: 20151028021909) do
     t.datetime "updated_at",    null: false
   end
 
-  add_index "curriculos", ["curso_id"], name: "index_curriculos_on_curso_id", using: :btree
-  add_index "curriculos", ["disciplina_id"], name: "index_curriculos_on_disciplina_id", using: :btree
+  add_index "curriculos", ["curso_id"], name: "index_curriculos_on_curso_id"
+  add_index "curriculos", ["disciplina_id"], name: "index_curriculos_on_disciplina_id"
 
   create_table "cursos", force: :cascade do |t|
     t.string   "nome"
@@ -50,11 +47,8 @@ ActiveRecord::Schema.define(version: 20151028021909) do
     t.datetime "updated_at",    null: false
   end
 
-  add_index "turmas", ["disciplina_id"], name: "index_turmas_on_disciplina_id", using: :btree
-  add_index "turmas", ["horario"], name: "index_turmas_on_horario", using: :btree
-  add_index "turmas", ["numero"], name: "index_turmas_on_numero", using: :btree
+  add_index "turmas", ["disciplina_id"], name: "index_turmas_on_disciplina_id"
+  add_index "turmas", ["horario"], name: "index_turmas_on_horario"
+  add_index "turmas", ["numero"], name: "index_turmas_on_numero"
 
-  add_foreign_key "curriculos", "cursos"
-  add_foreign_key "curriculos", "disciplinas"
-  add_foreign_key "turmas", "disciplinas"
 end

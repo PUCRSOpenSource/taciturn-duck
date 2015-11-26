@@ -9,11 +9,11 @@ gem 'cocoon'
 gem 'coffee-rails'
 gem 'jbuilder'
 gem 'jquery-rails'
-gem 'pg'
+gem 'rails-backup-migrate'
 gem 'select2-rails'
+gem 'sqlite3'
 gem 'turbolinks'
 gem 'uglifier'
-gem 'rails-backup-migrate'
 
 gem 'sdoc', group: :doc
 
@@ -28,6 +28,7 @@ end
 
 group :production do
 	gem 'rails_12factor', '0.0.2'
+	gem 'pg'
 end
 
 

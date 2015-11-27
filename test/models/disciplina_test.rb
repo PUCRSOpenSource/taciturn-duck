@@ -23,9 +23,4 @@ class DisciplinaTest < ActiveSupport::TestCase
 		assert disciplina.save
 	end
 
-	test "name should be a string" do
-		disciplina = Disciplina.new nome: 123, creditos: 6, semestre: 3
-		assert_not disciplina.nome.class == String
-	end
-
 end

@@ -8,6 +8,10 @@ class PagesController < ApplicationController
 	def backup_restore
 	end
 
+	def aconselhamento
+    @turma = Turma.new
+	end
+
 	def restore
 		system "rake site:restore"
 		render 'backup_restore'

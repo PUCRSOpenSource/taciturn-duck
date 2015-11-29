@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
 	get 'pages/about'
 	get 'pages/backup_restore'
+	get 'pages/aconselhamento'
 	get 'restore', to: 'pages#restore'
 	get 'backup', to: 'pages#backup'
 	resources :curriculos

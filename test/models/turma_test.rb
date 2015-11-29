@@ -5,19 +5,19 @@ class TurmaTest < ActiveSupport::TestCase
 	test "should not save turma without horario" do
 		turma = Turma.new numero: 128, disciplina_id: 1
 		assert_not turma.save
-		turma.horario = "2jk4jk"
+		turma.horario = "2JK4JK"
 		assert turma.save
 	end
 
 	test "should not save turma without numero" do
-		turma = Turma.new horario: "2jk4jk", disciplina_id: 1
+		turma = Turma.new horario: "2JK4JK", disciplina_id: 1
 		assert_not turma.save
 		turma.numero = 128
 		assert turma.save
 	end
 
 	test "should not save turma without disciplina_id" do
-		turma = Turma.new horario: "2jk4jk", numero: 128
+		turma = Turma.new horario: "2JK4JK", numero: 128
 		assert_not turma.save
 		turma.disciplina_id = 1
 		assert turma.save

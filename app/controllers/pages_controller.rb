@@ -9,6 +9,7 @@ class PagesController < ApplicationController
 	end
 
 	def aconselhamento
+		@restricao = Restricao.new
     @turma = Turma.new
 	end
 

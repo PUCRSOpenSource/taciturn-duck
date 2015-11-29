@@ -41,12 +41,12 @@ class TurmaTest < ActiveSupport::TestCase
 	end
 
 	test "numero should always be a number" do
-		turma = Turma.new horario: "2JK4JK", numero: "128", disciplina_id: 1
+		turma = Turma.new horario: "2JK4JK", numero: "T128", disciplina_id: 1
 		assert_not turma.save
 	end
 
 	test "disciplina_id should always be a number" do
-		turma = Turma.new horario: "2JK4JK", numero: 128, disciplina_id: "1"
+		turma = Turma.new horario: "2JK4JK", numero: 128, disciplina_id: "id1"
 		assert_not turma.save
 	end
 

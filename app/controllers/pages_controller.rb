@@ -9,8 +9,10 @@ class PagesController < ApplicationController
 	end
 
 	def aconselhamento
-		@restricao = Restricao.new
-    @turma = Turma.new
+	end
+
+	def do_grade
+		render :root
 	end
 
 	def restore

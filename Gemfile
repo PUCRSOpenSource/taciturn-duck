@@ -11,7 +11,6 @@ gem 'jbuilder'
 gem 'jquery-rails'
 gem 'rails-backup-migrate'
 gem 'select2-rails'
-gem 'sqlite3'
 gem 'turbolinks'
 gem 'uglifier'
 
@@ -22,6 +21,7 @@ group :development, :test do
 end
 
 group :development do
+	gem 'sqlite3'
 	gem 'web-console'
 	gem 'spring'
 end

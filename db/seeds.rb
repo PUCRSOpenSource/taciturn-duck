@@ -113,4 +113,11 @@ disciplina_list = [
 disciplina_list.each do |disciplina|
 	disc = Disciplina.create(nome: disciplina[0], creditos:disciplina[1], semestre: disciplina[2])
 	Curriculo.create(codigo: '4406', curso_id: 7, disciplina_id: disc.id)
+	Turma.create(horario: "3JK5JK ", turma: 128, disciplina_i: disc.id)
+	Turma.create(horario: "3JK5JK ", turma: 138, disciplina_i: disc.id)
+	Turma.create(horario: "2JK4JK6JK", turma: 228, disciplina_i: disc.id)
+	Turma.create(horario: "2JK4JK6JK", turma: 238, disciplina_i: disc.id)
+	Turma.create(horario: "6LMNP", turma: 238, disciplina_i: disc.id)
+	Turma.create(horario: "2LM4LM", turma: 128, disciplina_i: disc.id)
+	Turma.create(horario: "3NP5NP", turma: 128, disciplina_i: disc.id)
 end

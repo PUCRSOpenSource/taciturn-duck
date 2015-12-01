@@ -1,18 +1,19 @@
 class PagesController < ApplicationController
-  def home
-  end
+	def home
+	end
 
-  def about
-  end
+	def about
+	end
 
 	def backup_restore
 	end
 
 	def aconselhamento
+		@restricao = Restricao.new
 	end
 
 	def do_grade
-		render :root
+
 	end
 
 	def restore

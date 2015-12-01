@@ -7,21 +7,32 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
+			<%= link_to 'SAM', '/home', class: 'nav-bar-brand' %>
 			<a class="navbar-brand" href="#">SAM</a>
 		</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
+				<li>
+					<%= link_to 'Aconselhamento de Disciplina', '/aconselhamento' %>
+				</li>
 				<li class="dropdown">
 					<%= link_to 'Currículo', curriculos_path %>
 					<ul class="dropdown-menu">
-						<li><a href="#">Cadastrar</a></li>
+						<li>
+							<%= link_to 'Cadastrar', new_curriculo_path %>
+						</li>
 					</ul>
 				</li>
 				<li class="dropdown">
 					<%= link_to 'Turma', turmas_path %>
 					<ul class="dropdown-menu">
-						<li><a href="#">Cadastrar</a></li>
+						<li>
+							<%= link_to 'Cadastrar', new_turma_path %>
+						</li>
 					</ul>
+				</li>
+				<li>
+					<%= link_to 'Gerencia de Dados', '/backup_restore' %>
 				</li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">

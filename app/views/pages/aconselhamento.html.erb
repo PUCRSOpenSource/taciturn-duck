@@ -6,13 +6,27 @@
 
 	<p>Gerar grade de horário</p>
 
-	<%= link_to 'Gerar grade', :grade, class: 'btn btn-default' %>
+	</br>
+	</br>
+	</br>
+
+		<p>Restrições de horário usadas:</p>
+		<% [ '2JK', '3JK', '6JKLMNP' ].each do |x| %>
+			<%= x %></br>
+		<% end %>
+	</br>
+	<p>Disciplinas já cursadas:</p>
+		<% [ 1, 2, 3, 10 ].each do |x| %>
+			<%= Disciplina.where(id: x).first.nome %></br>
+		<% end %>
 
 	</br>
 	</br>
 	</br>
-	</br>
-	</br>
+	
+
+	<%= link_to 'Gerar grade', :grade, class: 'btn btn-default' %>
+
 	</br>
 	</br>
 	<%= link_to 'Voltar', :root, class: 'btn btn-default' %>

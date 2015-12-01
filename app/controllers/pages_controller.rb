@@ -13,6 +13,11 @@ class PagesController < ApplicationController
 	end
 
 	def do_grade
+		horarios = [ '2JK', '3JK', '6JKLMNP' ]
+		disc_cur = [ 1, 2, 3, 10 ]
+
+		#disciplinas q o user pode fazer
+		@courses_available = Disciplina.where.not(id: disc_cur)
 
 	end
 

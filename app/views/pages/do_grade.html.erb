@@ -1,0 +1,4 @@
+<% @turmas.each do |t| %>
+	<%= @courses_available.where(id: t.disciplina_id).first.nome %></br>
+	<%= t.horario %>
+<% end %>

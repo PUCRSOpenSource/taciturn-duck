@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 	get '/backup_restore' => 'pages#backup_restore'
 	get 'pages/about'
 	get 'pages/aconselhamento'
-	post 'pages/do_grade', to: 'pages#do_grade'
+	get 'grade', to: 'pages#do_grade'
 	get 'restore', to: 'pages#restore'
 	get 'backup', to: 'pages#backup'
 	resources :curriculos

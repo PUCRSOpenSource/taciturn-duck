@@ -1,3 +1,4 @@
-<% @courses_available.each do |ca| %>
-	%<%= ca.numero %></br>
+<% @turmas.each do |t| %>
+	<%= @courses_available.where(id: t.disciplina_id).first.nome %></br>
+	<%= t.horario %>
 <% end %>

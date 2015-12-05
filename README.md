@@ -1,4 +1,4 @@
-# Aconselhador de matrícula
+# Aconselhador de matrícula [![Build Status](https://travis-ci.org/djornada/taciturn-duck.svg?branch=master)](https://travis-ci.org/djornada/taciturn-duck)
 
 ## Descrição breve
   Todo semestre o aluno deve realizar a sua rematrícula nas disciplinas curriculares do curso. Entretanto, na impossibilidade de se matricular em toda a grade curricular do semestre, o aluno poderia verificar quais disciplinas e turmas mais adequadas para se matricular, considerando as suas restrições. Ao final, receberia um relatório indicando as turmas e disciplinas mais adequadas para a matrícula.

@@ -1,1 +1,0 @@
-{<img src="https://magnum.travis-ci.com/djornada/taciturn-duck.svg?token=5JLBuaWZHaduxmfL3XDo" alt="Build Status" />}[https://magnum.travis-ci.com/djornada/taciturn-duck]
